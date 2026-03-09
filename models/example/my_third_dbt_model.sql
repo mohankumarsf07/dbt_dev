@@ -7,5 +7,5 @@
 
 
 
-select * from BANKING.BANK_SCH.EMP;
+select * from BANKING.BANK_SCH.EMP
 
