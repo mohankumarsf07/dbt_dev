@@ -7,8 +7,8 @@
 
 
 
-select * from BANKING.BANK_SCH.EMP as e
-JOIN 
-BANKING.BANK_SCH.users u
-on e.id=u.id
+select * from BANKING.BANK_SCH.EMP 
+intersect
+select * from BANKING.BANK_SCH.emp
+
 
