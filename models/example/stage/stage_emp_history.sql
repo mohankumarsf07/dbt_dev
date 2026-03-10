@@ -1,8 +1,3 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
 
 
 {{
@@ -10,17 +5,22 @@
         materialized='table'
     )
 }}
+
+{% set start_date ='2023-01-15' %}
+{% set end_date='2024-05-23' %}
+
 
 SELECT 
     J.JOB_TITLE,
     D.DEPARTMENT_NAME,
-    CONCAT(E.FIRST_NAME,'::', E.LAST_NAME) AS FULL_NAME
+    CONCAT(E.FIRST_NAME,'::', E.LAST_NAME) AS FULL_NAME,
+    E.salary 
 
 FROM {{ ref('RAW_EMPLOYEES') }} E
 
 INNER JOIN {{ ref('RAW_JOB_HISTORY') }} JH
     ON E.EMPLOYEE_ID = JH.EMPLOYEE_ID
-    AND JH.START_DATE BETWEEN '2023-01-15' AND '2024-05-23'
+    AND JH.START_DATE BETWEEN '{{start_date}}' AND '{{end_date}}'
 
 INNER JOIN {{ ref('raw_jobs') }} J
     ON J.JOB_ID = JH.JOB_ID
