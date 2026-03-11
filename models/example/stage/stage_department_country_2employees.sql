@@ -6,7 +6,7 @@
 
 {% set dep_emp_count = '2' %}
 
-select C.COUNTRY_NAME,L.CITY,count(d.department_id) FROM {{ ref('RAW_COUNTRIES') }} C
+select C.COUNTRY_NAME,L.CITY,count(d.department_id) as count FROM {{ ref('RAW_COUNTRIES') }} C
 INNER JOIN {{ ref('RAW_LOCATION') }} L
 ON C.COUNTRY_ID=L.COUNTRY_ID
 INNER JOIN {{ ref('RAW_DEPARTMENTS') }} D
