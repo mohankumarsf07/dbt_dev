@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: hr_info
+    database: dbt_test
+    schema: dbt_sc
+
+    tables:
+      - name: countries
+      - name: department
+      - name: employees
+      - name: jobs
+      - name: job_history
+      - name: locations
+      - name: regions

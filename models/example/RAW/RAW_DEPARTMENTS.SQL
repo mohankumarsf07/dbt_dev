@@ -4,4 +4,4 @@
     )
 }}
 
-SELECT * FROM DBT_TEST.DBT_SC.DEPARTMENTS
+SELECT * FROM {{ source('hr_info', 'department') }}
