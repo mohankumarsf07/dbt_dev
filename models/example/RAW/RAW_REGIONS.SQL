@@ -4,4 +4,4 @@
     )
 }}
 
-SELECT * FROM {{ source('hr_info', 'regions') }}
+SELECT * FROM {{ source('region_info', 'regions') }}
