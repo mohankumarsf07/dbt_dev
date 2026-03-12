@@ -7,7 +7,7 @@ sources:
 
     tables:
       - name: countries
-      - name: department
+      - name: departments
       - name: employees
       - name: jobs
       - name: job_history

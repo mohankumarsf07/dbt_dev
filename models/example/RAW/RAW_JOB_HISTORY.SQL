@@ -4,4 +4,4 @@
     )
 }}
 
-SELECT * FROM DBT_TEST.DBT_SC.JOB_HISTORY
+SELECT * FROM {{ source('hr_info', 'job_history') }}
