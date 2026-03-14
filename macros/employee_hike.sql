@@ -1,5 +1,8 @@
-{% macro employee_hike() %}
+{% macro employee_hike(hike_per) %}
 
-(SALARY+(SALARY* (20/100)))
+
+(SALARY+(SALARY*("hike_per"/100)))
+
+
 
 {% endmacro %}
