@@ -5,3 +5,5 @@
 }}
 
 SELECT * FROM {{ source('hr_info','departments') }}
+
+

@@ -40,3 +40,8 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+
+
+
+vars: 
+  surrogate_key_treat_nulls_as_empty_strings: true

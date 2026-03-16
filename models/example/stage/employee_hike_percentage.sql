@@ -5,5 +5,9 @@
 }}
 
 
-select employee_id,concat(first_name,'  ',last_name) as full_name,salary,{{ employee_hike('30') }} as Sal_hike from {{ ref('RAW_EMPLOYEES') }}
+select {{ dbt_utils.genarate_surroggate_key(['employee_id','FIRST_NAME','job_id'])}} employee_id, FIRST_NAME,job_id,{{ employee_hike('30') }} as Sal_hike 
+from {{ ref('RAW_EMPLOYEES') }}
 
+
+
+-- select ,employee_id,FIRST_NAME,job_id * from {{ ref('RAW_EMPLOYEES') }}
