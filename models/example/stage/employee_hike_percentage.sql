@@ -10,8 +10,6 @@ from {{ ref('RAW_EMPLOYEES') }}
 
 
 
--- select ,employee_id,FIRST_NAME,job_id * from {{ ref('RAW_EMPLOYEES') }}
-
 SELECT
     {{ dbt_utils.generate_surrogate_key(['employee_id','department_id']) }} AS emp_key,
     employee_id,
