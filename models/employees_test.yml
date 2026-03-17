@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: departments
+  - name: RAW_DEPARTMENTS
     columns:
       - name: DEPARTMENT_NAME
-        test:
+        tests:
           - unique
