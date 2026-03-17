@@ -17,3 +17,5 @@ sum(case when job_id = '{{j_id}}' then salary end) as {{j_id}}_tot_amount
  {% if not loop.last %},{% endif %}
  {% endfor %}
  from {{ ref('RAW_EMPLOYEES') }} group by 1
+
+ {{ source('source_name', 'object_name') }}
