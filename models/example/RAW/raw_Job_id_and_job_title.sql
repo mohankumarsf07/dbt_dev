@@ -18,7 +18,5 @@ with cte as (
 select * from cte
 where country_code = USA
 
--- select country_name, {{ dbt_utils.pivot('country_co',dbt_utils.get_column_values(ref('country_codes')country) ) }} 
--- from {{ ref('country_codes') }}
--- group by country_name
+
 
