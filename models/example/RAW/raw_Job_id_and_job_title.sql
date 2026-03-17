@@ -12,19 +12,13 @@
     )
 }}
 
--- with cte as (
---     select * from {{ ref('country_codes') }}
--- )
--- select * from cte
--- where country_code = USA
+with cte as (
+    select * from {{ ref('country_codes') }}
+)
+select * from cte
+where country_code = USA
 
--- select country_name, {{ dbt_utils.pivot('country_co',dbt_utils.get_column_values(ref('country_codes'),'coun') 
---  ) }} 
+-- select country_name, {{ dbt_utils.pivot('country_co',dbt_utils.get_column_values(ref('country_codes')country) ) }} 
 -- from {{ ref('country_codes') }}
 -- group by country_name
 
-
--- -- {{ dbt_utils.pivot(
---       'color',
---       dbt_utils.get_column_values(ref('orders'), 'color')
---   ) }}
