@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: departments
+    columns:
+      - name: DEPARTMENT_NAME
+        test:
+          - unique
+          - not_null
