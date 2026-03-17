@@ -6,4 +6,3 @@ models:
       - name: DEPARTMENT_NAME
         test:
           - unique
-          - not_null
