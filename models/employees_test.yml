@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: RAW_DEPARTMENTS
+    columns:
+      - name: DEPARTMENT_NAME
+        tests:
+          - unique

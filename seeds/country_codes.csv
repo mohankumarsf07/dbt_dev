@@ -1,0 +1,13 @@
+country_code,country_name
+USA,UNITED STATES OF AMERICA
+US,UNITED STATES
+CA,CANADA
+IND,INDIA
+JP,JAPAN
+CHI,CHINA
+NEP,NEPAL
+NZ,newzeland
+ENG,England
+
+
+
